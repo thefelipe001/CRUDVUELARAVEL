@@ -1,0 +1,34 @@
+
+Crear un nuevo Proyecto
+composer create-project --prefer-dist laravel/laravel  Login
+
+Crear un Controlador
+php artisan make:controller ProductsController
+
+Para agregar una ruta no dirigimos routes/web.php para el controlador
+
+use App\Http\Controllers\ProductsController;
+
+Route::get('/products',[ProductsController::class,'Index']);
+Route::get('/products',[ProductsController::class,'Index'])->name('products.index');
+Route::get('/products/create',[ProductsController::class,'create'])->name('products.create');
+Route::resource('products',ProductsController::class);
+
+
+Para correr un programa 
+php artisan serve
+
+
+para hacer una migracion
+php artisan make:migration create_products_table
+php artisan migrate
+
+Para crear un Modelo
+php artisan make:model Product
+
+http://cornegramm.xyz/sources/plantilla-tailwind-css-tabla-de-registros
+
+php artisan route:list
+
+para yo realizar cambios
+npm run dev

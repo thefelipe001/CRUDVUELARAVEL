@@ -1,0 +1,17 @@
+para crear un nuevo proyecto
+composer create-project --prefer-dist laravel/laravel  Ejemplo
+
+para hacer la migracion 
+php artisan migrate
+
+para crear el modelo y el controlador
+php artisan make:model Empleado -mcr
+
+con este router se pueden llamar cualquier vista del controlador
+Route::get('/empleado/create',[EmpleadoController::class,'create']);
+
+para ver la rutas ultilizo el comando
+php artisan route:list
+
+para poder acceder a todo los metodo de un controlador
+Route::resource('empleado',EmpleadoController::class);
